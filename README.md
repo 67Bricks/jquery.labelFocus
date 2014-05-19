@@ -1,7 +1,7 @@
 jquery.labelFocus
 =================
 
-labelFocus - a JQuery plugin to increase accessibility of form elements for keyboard users
+A JQuery plugin to increase accessibility of form elements for keyboard users
 
 labelFocus is a JQuery plugin to enable highlighting of the labels of form fields when those form fields are focussed. It is intended to increase the accessibility of form elements - particularly checkboxes and radio buttons - when accessed by the keyboard. The problem it aims to overcome is that most browsers make it very hard to see when a checkbox or radio button has the focus.
 
