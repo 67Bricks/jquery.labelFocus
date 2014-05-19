@@ -1,0 +1,69 @@
+<html>
+<head>
+<script type="text/javascript" src="../lib/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="../jquery.labelFocus.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('input[type=radio]').labelFocus();
+	$('input[type=checkbox]').labelFocus({ focusClass : "focus2" });
+});
+</script>
+<style type="text/css">
+label.focus { background: blue; color: white; }
+label.focus2 { background: red; color: white; }
+th.focus { background: green; color: white; }
+th.focus2 { background: yellow; color: black; }
+</style>
+</head>
+<body>
+
+<form>
+<fieldset>
+	<legend>Checkboxes</legend>
+	<label>This is an implicit label<input type="checkbox" id="check1" /></label>
+	<label for="check2">This is an explicit label</label><input id="check2" type="checkbox" />
+</fieldset>
+
+<fieldset>
+	<legend>Radio buttons</legend>
+	<label>Hot<input type="radio" name="temperature" value="Hot" /></label>
+	<label>Cold<input type="radio" name="temperature" value="Cold" /></label>
+	<p>And some explicit labels</p>
+	<label for="radioBlue">Blue</label><input id="radioBlue" name="colour" type="radio" value="Blue"/>
+	<label for="radioGreen">Green</label><input id="radioGreen" name="colour" type="radio" value="Green" />
+</fieldset>
+
+<fieldset>
+	<legend>Checkboxes in a table - no (visible) labels</legend>
+	<table>
+		<thead>
+			<tr><th></th><th>Full</th><th>Partial</th>
+		</thead>
+		<tbody>
+			<tr><th scope="row">Snail</th><td><input id="aa" type="checkbox"/></td><td><input id="ab" type="checkbox"/></td></tr>
+			<tr><th scope="row">Quail</th><td><input id="ba" type="checkbox"/></td><td><input id="bb" type="checkbox"/></td></tr>
+		</tbody>
+	</table>
+</fieldset>
+
+
+<fieldset>
+	<legend>Radio buttons in a table - no (visible) labels</legend>
+	<table>
+		<thead>
+			<tr><th></th><th>Full</th><th>Partial</th>
+		</thead>
+		<tbody>
+			<tr><th scope="row">Armadillo</th><td><input name="armadillo" type="radio"/></td><td><input name="armadillo" type="radio"/></td></tr>
+			<tr><th scope="row">Velociraptor</th><td><input name="velociraptor" type="radio"/></td><td><input name="velociraptor" type="radio"/></td></tr>
+		</tbody>
+	</table>
+</fieldset>
+
+
+
+
+</form>
+
+</body>
+</html>
